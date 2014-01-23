@@ -31,7 +31,7 @@ public:
 // Dimensions for our curtain. These are number of particles for each direction, not actual widths and heights
 // the true width and height can be calculated by multiplying restingDistances by the curtain dimensions
     int curtainHeight = 100;
-    int curtainWidth = 120;
+    int curtainWidth = 140;
     int yStart = 25; // where will the curtain start on the y axis?
     float restingDistances = 5;
     float stiffnesses = 1;

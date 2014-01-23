@@ -86,6 +86,44 @@ void Fabric::draw(bool pMousePressed, string pMouseString, int pMouseX, int pMou
         particle->draw();
     }
 
+    //cout << "fabric4" << endl;    //PImage a = loadImage("1274232787263.png");
+
+
+    glBegin(GL_QUADS);
+    for (int x = 1; x < curtainWidth; x++)
+    {
+        for (int y = 1; y < curtainHeight; y++)
+        {
+            //tile.copy(a, x*(a.width/curtainWidth),y*(a.height/curtainHeight), a.width/curtainWidth,a.height/curtainHeight, 0,0, tile.width,tile.height);
+            Particle * topLeft = particles.at(y * (curtainWidth+1) + x);
+            Particle * topRight = particles.at(y * (curtainWidth+1) + x+1);
+            Particle * bottomRight = particles.at((y-1) * (curtainWidth+1) + (x+1));
+            Particle * bottomLeft = particles.at((y-1) * (curtainWidth+1) + x);
+
+            if (topLeft->links.size() > 1
+                && topRight->links.size() > 1
+                && bottomRight->links.size() > 1
+                && bottomLeft->links.size() > 1
+            ) {
+            glColor4f(255/255.0, 69/255.0, 0/255.0,0.5);
+            } else {
+            glColor4f(0.0, 1.0, 0.0,0.0);
+            }
+            //glTexCoord(x*(teximg.width/curtainWidth),y*(teximg.height/curtainHeight));
+            glVertex3f(topLeft->position.x, topLeft->position.y,0.0);
+            //glTexCoord((x+1)*(teximg.width/curtainWidth),y*(teximg.height/curtainHeight));
+            glVertex3f(topRight->position.x, topRight->position.y,0.0);
+            //glTexCoord((x)*(teximg.width/curtainWidth),(y+1)*(teximg.height/curtainHeight));
+            glVertex3f(bottomRight->position.x, bottomRight->position.y,0.0);
+            //glTexCoord((x+1)*(teximg.width/curtainWidth),(y+1)*(teximg.height/curtainHeight));
+            glVertex3f(bottomLeft->position.x, bottomLeft->position.y,0.0);
+
+
+
+        }
+    }
+    glEnd();
+
     //cout << "fabric4" << endl;
 }
 

@@ -20,7 +20,7 @@ pMouseY = mouseY;
 void testApp::draw() {
 ofBackground(255,255,255,255);
 ofSetColor(0,0,0,255);
-ofDrawBitmapString(ofToString(ofGetFrameRate()), 20, 20);
+//ofDrawBitmapString(ofToString(ofGetFrameRate()), 20, 20);
 fabric.draw(pMousePressed, pMouseString, pMouseX, pMouseY);
 }
 
