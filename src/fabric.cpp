@@ -1,3 +1,15 @@
+/*
+  curtain_OFport, by Tom Andreas Nærland, tom.naerland@gmail.com 2014
+
+  based on the original by Jared Count:
+  Curtain (Fabric Simulator)
+  Made by BlueThen on February 5th, 2011; updated February 10th and 11th, 2011 and July 18th and 19th, 2011
+  To interact, left click and drag, right click to tear,
+               press 'G' to toggle gravity, and press 'R' to reset
+  www.bluethen.com
+*/
+
+
 #include "fabric.h"
 
 void Fabric::setup()
