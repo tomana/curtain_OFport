@@ -40,6 +40,9 @@ pMouseString = "RIGHT";
 }
 }
 
+void testApp::keyPressed(int key) {
+fabric.createCurtain();
+}
 void testApp::mouseReleased(int x, int y, int button)
 {
 pMousePressed = false;

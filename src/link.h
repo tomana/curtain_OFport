@@ -11,7 +11,7 @@ public:
 
   float restingDistance;
   float stiffness;
-  float curtainTearSensitivity = 50;
+  float curtainTearSensitivity = 10050;
 
   Particle * p1;
   Particle * p2;

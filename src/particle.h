@@ -31,7 +31,7 @@ public:
 
     float mouseInfluenceSize = 15;
 // minimum distance for tearing when user is right clicking
-    float mouseTearSize = 8;
+    float mouseTearSize = 3;
     float mouseInfluenceScalar = 1;
 
     // An ArrayList for links, so we can have as many links as we want to this particle :)

@@ -30,12 +30,12 @@ public:
 
 // Dimensions for our curtain. These are number of particles for each direction, not actual widths and heights
 // the true width and height can be calculated by multiplying restingDistances by the curtain dimensions
-    int curtainHeight = 100;
-    int curtainWidth = 140;
+    int curtainHeight = 60;
+    int curtainWidth = 80;
     int yStart = 25; // where will the curtain start on the y axis?
-    float restingDistances = 5;
-    float stiffnesses = 1;
-    float curtainTearSensitivity = 50; // distance the particles have to go before ripping
+    float restingDistances = 10;
+    float restingDistances2 = 10;
+    float stiffnesses = 1; // distance the particles have to go before ripping
 
 // These variables are used to keep track of how much time is elapsed between each frame
 // they're used in the physics to maintain a certain level of accuracy and consistency

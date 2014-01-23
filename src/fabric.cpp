@@ -131,7 +131,7 @@ void Fabric::createCurtain ()
 {
     // We use an ArrayList instead of an array so we could add or remove particles at will.
     // not that it isn't possible using an array, it's just more convenient this way
-
+    particles.clear();
     // midWidth: amount to translate the curtain along x-axis for it to be centered
     // (curtainWidth * restingDistances) = curtain's pixel width
     int midWidth = (int) (ofGetWidth()/2 - (curtainWidth * restingDistances)/2);
@@ -150,7 +150,7 @@ void Fabric::createCurtain ()
 
             if (x != 0) {
 
-                particle->attachTo(particle, particles.at(particles.size()-1), restingDistances, stiffnesses);
+                particle->attachTo(particle, particles.at(particles.size()-1), restingDistances2, stiffnesses);
                 //cout << "links vector outside, x" <<endl;
                 //cout << particle->links.back()->p2->position << endl;
                 }
@@ -158,7 +158,7 @@ void Fabric::createCurtain ()
             // so we convert x,y coordinates to 1 dimension using the formula y*width+x
 
             if (y != 0) {
-                particle->attachTo(particle, (particles.at((y - 1) * (curtainWidth + 1) + x)), restingDistances, stiffnesses);
+                particle->attachTo(particle, (particles.at((y - 1) * (curtainWidth + 1) + x)), restingDistances2, stiffnesses);
                 //cout << "links vector outside, y" <<endl;
                 }
 
@@ -177,7 +177,14 @@ void Fabric::createCurtain ()
             // we pin the very top particles to where they are
             if (y == 0)
                 particle->pinTo(particle->position);
-
+            /*
+            if (y == curtainHeight)
+                particle->pinTo(particle->position);
+            if (x == 0)
+                particle->pinTo(particle->position);
+            if (x == curtainWidth)
+                particle->pinTo(particle->position);
+            */
             // add to particle array
             particles.push_back(particle);
             //cout << particles.back()->position << endl;
