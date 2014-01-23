@@ -8,5 +8,5 @@ Description
 ----
 Simple yet really responsive and dynamic, with a relatively flexible implementation. Most of the functionality (-keyboard) + brilliant comments from Jared Counts original implementation are kept. Some cheap and dirty code w.r.t. mouse input.
 
-![ScreenShot](https://raw.github.com/tomana/customVectorfield_movement/master/screenshot.png)
+![ScreenShot](https://raw.github.com/tomana/curtain_OFport/master/screenshot.png)
 
